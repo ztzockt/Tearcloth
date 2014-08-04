@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tearcloth</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+
+    <canvas id="c"></canvas>
+
+    <a target="_blank" href="https://github.com/ztzockt/Tearcloth" id="p">Quellcode ansehen</a>
+
+    <div id="info">
+        <div id="top">
+            <a target="_blank" id="site" href="javascript:alert('Du bist bereits auf der Tearcloth-Seite, wo willst du hin?');">Tearcloth</a>
+            <a id="close" href="">x</a>
+        </div>
+        <p>
+            <br>- Zieh mit der gedrückter linker Maustaste am Vorhang.
+            <br>
+            <br>- Mit Rechtsklick kannst du den Vorhang durchschneiden.
+            <br>
+            <br>- Sollte es laggen, ist die Genauigkeit der Physik zu hoch eingestellt.
+            <br>
+            <br>
+        </p>
+    </div>
+
+
+
+    <script type="text/javascript">
+        document.getElementById('close').onmousedown = function(e) {
+            e.preventDefault();
+            document.getElementById('info').style.display = 'none';
+            return false;
+        };
+    </script>
+    
+    <script type="text/javascript" src="Cloth.js"></script>
+</body>
+
+</html>
